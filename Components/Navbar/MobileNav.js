@@ -1,6 +1,6 @@
 import { Divide as Hamburger } from "hamburger-react";
 import { useAppContext } from "../../Context/Context";
-
+import MobileNavLinks from "./MobileNavLinks";
 
 
 
@@ -23,7 +23,7 @@ const MobileNav = () => {
       </div>
 
       {/* // ! Test context */}
-      {useAppContext().isNavOpen && <div>SUUCEEEEESSSSS!!!!!!</div>}
+      {useAppContext().isNavOpen && <MobileNavLinks/>}
     </div>
   );
 };
