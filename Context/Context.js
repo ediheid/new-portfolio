@@ -4,6 +4,7 @@ const AppContext = createContext();
 
 // App Wrapper - (wrapped around App Component)
 export const AppWrapper = ({ children }) => {
+
   // Hamburger dropdwon state
   let [isNavOpen, setIsNavOpen] = useState(false);
 // Functio to close mobile nav when clicking on link
