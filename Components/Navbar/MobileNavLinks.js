@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment } from "react";
 import { useAppContext } from "../../Context/Context";
 import { motion } from "framer-motion";
 
@@ -10,6 +11,8 @@ const MobileNavLinks = () => {
 
 
   return (
+<Fragment>
+
     <motion.ul
       className={styles["mobile-nav-links-container"]}
       initial={animateFrom}
@@ -71,6 +74,7 @@ const MobileNavLinks = () => {
         </Link>
       </motion.li>
     </motion.ul>
+    </Fragment>
   );
 };
 
