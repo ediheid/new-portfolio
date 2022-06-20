@@ -43,6 +43,8 @@
   padding: 1em 2em 1em 1em;
 
   transition: "top 0.9s";
+
+  // background: transparent;
 }
 
 // Mobile links container
@@ -59,6 +61,8 @@
   width: 100vw;
 
   position: fixed;
+
+  // Todo: De-bug why top has a gap unless I set it like this..
   top: -1rem;
   left: 0;
   right: 0;

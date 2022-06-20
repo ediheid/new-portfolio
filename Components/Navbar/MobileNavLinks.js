@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useAppContext } from "../../Context/Context";
 import { motion } from "framer-motion";
 
 import styles from "./navbar.module.scss"
@@ -7,18 +8,22 @@ const MobileNavLinks = () => {
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
 
+
   return (
     <motion.ul
-    className={styles["mobile-nav-links-container"]}
+      className={styles["mobile-nav-links-container"]}
       initial={animateFrom}
       animate={animateTo}
       transition={{ delay: 0.05 }}
+    
     >
       <motion.li
-      className={styles["nav-links"]}
+        className={styles["nav-links"]}
         initial={animateFrom}
         animate={animateTo}
         transition={{ delay: 0.2 }}
+        onClick={useAppContext().closeHamburgerDropdownOnClick}
+        
       >
         <Link href="/portfolio" alt="Link to projects page">
           Portfolio
@@ -30,6 +35,7 @@ const MobileNavLinks = () => {
         initial={animateFrom}
         animate={animateTo}
         transition={{ delay: 0.3 }}
+        onClick={useAppContext().closeHamburgerDropdownOnClick}
       >
         <Link href="/webapps" alt="Link to Web Apps page">
           Web-Apps
@@ -41,6 +47,7 @@ const MobileNavLinks = () => {
         initial={animateFrom}
         animate={animateTo}
         transition={{ delay: 0.4 }}
+        onClick={useAppContext().closeHamburgerDropdownOnClick}
       >
         <Link href="/contact" alt="Link to contact page">
           Contact
@@ -53,6 +60,7 @@ const MobileNavLinks = () => {
         initial={animateFrom}
         animate={animateTo}
         transition={{ delay: 0.5 }}
+        onClick={useAppContext().closeHamburgerDropdownOnClick}
       >
         <Link
           id="nav-home-link"
