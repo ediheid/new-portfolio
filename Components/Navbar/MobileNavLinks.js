@@ -1,17 +1,21 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import styles from "./navbar.module.scss"
+
 const MobileNavLinks = () => {
   const animateFrom = { opacity: 0, y: -40 };
   const animateTo = { opacity: 1, y: 0 };
 
   return (
     <motion.ul
+    className={styles["mobile-nav-links-container"]}
       initial={animateFrom}
       animate={animateTo}
       transition={{ delay: 0.05 }}
     >
       <motion.li
+      className={styles["nav-links"]}
         initial={animateFrom}
         animate={animateTo}
         transition={{ delay: 0.2 }}
@@ -22,6 +26,7 @@ const MobileNavLinks = () => {
       </motion.li>
 
       <motion.li
+      className={styles["nav-links"]}
         initial={animateFrom}
         animate={animateTo}
         transition={{ delay: 0.3 }}
@@ -32,6 +37,7 @@ const MobileNavLinks = () => {
       </motion.li>
 
       <motion.li
+      className={styles["nav-links"]}
         initial={animateFrom}
         animate={animateTo}
         transition={{ delay: 0.4 }}
@@ -43,6 +49,7 @@ const MobileNavLinks = () => {
 
 {/* // Todo: Check that id is Hashlinked to top of landing page? */}
       <motion.li
+      className={styles["nav-links"]}
         initial={animateFrom}
         animate={animateTo}
         transition={{ delay: 0.5 }}

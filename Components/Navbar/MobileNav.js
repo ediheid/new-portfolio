@@ -2,19 +2,22 @@ import { Divide as Hamburger } from "hamburger-react";
 import { useAppContext } from "../../Context/Context";
 import MobileNavLinks from "./MobileNavLinks";
 
+import styles from "./navbar.module.scss";
 
-
-
-const MobileNav = () => {
-
+const MobileNav = (props) => {
   return (
-    <div>
+    <div
+      className={
+        props.bgChange
+          ? `${styles["bgChange"]} ${styles["mobile-navigation"]}`
+          : `${styles["mobile-navigation"]}`
+      }
+    >
       <div>Logo</div>
 
       {/* Hamburger */}
-      <div className="hamburger-container">
+      <div className={styles["hamburger-container"]}>
         <Hamburger
-          // Aria label for accessibility
           label="Show menu"
           size={25}
           toggled={useAppContext().isNavOpen}
@@ -22,8 +25,8 @@ const MobileNav = () => {
         />
       </div>
 
-      {/* // ! Test context */}
-      {useAppContext().isNavOpen && <MobileNavLinks/>}
+      {/* Open Hamburger Dropdown */}
+      {useAppContext().isNavOpen && <MobileNavLinks />}
     </div>
   );
 };
