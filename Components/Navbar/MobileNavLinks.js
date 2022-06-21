@@ -33,7 +33,7 @@ const MobileNavLinks = () => {
           className={styles["nav-links"]}
           initial={animateFrom}
           animate={animateTo}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.25 }}
           onClick={useAppContext().closeHamburgerDropdownOnClick}
         >
           <Link href="/webapps" alt="Link to Web Apps page">
@@ -45,7 +45,7 @@ const MobileNavLinks = () => {
           className={styles["nav-links"]}
           initial={animateFrom}
           animate={animateTo}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.3 }}
           onClick={useAppContext().closeHamburgerDropdownOnClick}
         >
           <Link href="/contact" alt="Link to contact page">
@@ -58,7 +58,7 @@ const MobileNavLinks = () => {
           className={styles["nav-links"]}
           initial={animateFrom}
           animate={animateTo}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.35 }}
           onClick={useAppContext().closeHamburgerDropdownOnClick}
         >
           <Link id="nav-home-link" href="/" alt="Link to home/about page">
