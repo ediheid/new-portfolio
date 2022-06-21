@@ -1,0 +1,30 @@
+// Media Queries
+// Main styles are written for mobile first
+
+// Tablet small and large
+@mixin tablet {
+  @media (min-width: 580px) {
+    @content;
+  }
+}
+
+// Small desktop
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+// Large desktops
+@mixin large-desktop {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+// Extra small devices
+@mixin galaxy-fold-and-lower {
+  @media (max-width: 320px) {
+    @content;
+  }
+}
