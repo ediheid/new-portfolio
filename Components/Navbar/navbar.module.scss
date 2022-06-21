@@ -12,24 +12,25 @@
 
 // Todo: Add variables and import fonts
 .nav-links {
-  text-decoration: none;
-  // color: $main-site-blue;
-  // font-family: $nav-links-font-family;
-  font-size: 1.6em;
-  margin: 0.5rem 0 0.5rem 0;
+  font-family: $nav-links-font-family;
+  font-size: 2.6rem;
+  margin: 1rem 0 1rem 0;
 
   // Todo: Add sticky hover solution
   &:hover {
     font-weight: bold;
-    //   color: $pink-lace;
+    color: $pink-lace;
   }
+}
+
+.nav-links * {
+  text-decoration: none;
+  color: $main-site-blue;
 }
 
 .hamburger-container {
   z-index: 7000;
   top: 2rem;
-  padding: 0.5rem;
-
   color: $hot-pink;
 }
 
@@ -40,7 +41,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em 1em 1em;
+  padding: 1em 1em 1em 1em;
 
   transition: "top 0.9s";
 
@@ -53,11 +54,13 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  padding: 8rem 3rem 0 0;
 
   background-color: $cotton-candy;
-  height: 100vh;
+  height: 55vh;
   width: 100vw;
 
   position: fixed;
@@ -65,5 +68,4 @@
   // Todo: De-bug why top has a gap unless I set it like this..
   top: -1rem;
   left: 0;
-  right: 0;
 }
