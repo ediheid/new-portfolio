@@ -1,11 +1,11 @@
 @import "../../styles/variables";
 
 .logo-home-container {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 .logo-text {
-  //   font-family: $sub-headings;
+  font-family: $sub-headings;
   font-size: 2.5rem;
   color: $hot-pink;
 
@@ -24,8 +24,4 @@
   .logo-text:hover {
     color: $cotton-candy;
   }
-}
-
-.logo-smaller-font {
-  font-size: 1.5rem;
 }
