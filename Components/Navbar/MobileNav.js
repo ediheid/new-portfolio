@@ -1,6 +1,7 @@
 import { Divide as Hamburger } from "hamburger-react";
 import { useAppContext } from "../../Context/Context";
 import MobileNavLinks from "./MobileNavLinks";
+import LogoLink from "./LogoLink";
 
 import styles from "./navbar.module.scss";
 
@@ -13,7 +14,7 @@ const MobileNav = (props) => {
           : `${styles["mobile-navigation"]}`
       }
     >
-      <div>Logo</div>
+      <LogoLink />
 
       {/* Hamburger */}
       <div className={styles["hamburger-container"]}>

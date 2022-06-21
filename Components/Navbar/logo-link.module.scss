@@ -1,0 +1,31 @@
+@import "../../styles/variables";
+
+.logo-home-container {
+  margin-left: 1rem;
+}
+
+.logo-text {
+  //   font-family: $sub-headings;
+  font-size: 2.5rem;
+  color: $hot-pink;
+
+  cursor: pointer;
+
+  &::first-letter {
+    font-size: 4rem;
+  }
+
+  &:active {
+    color: $cotton-candy;
+  }
+}
+
+@media (hover: hover) {
+  .logo-text:hover {
+    color: $cotton-candy;
+  }
+}
+
+.logo-smaller-font {
+  font-size: 1.5rem;
+}
