@@ -3,7 +3,7 @@
 
 // Tablet small and large
 @mixin tablet {
-  @media (min-width: 580px) {
+  @media (min-width: 768px) {
     @content;
   }
 }

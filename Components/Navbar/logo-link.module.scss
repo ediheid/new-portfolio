@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .logo-home-container {
   margin-left: 0.5rem;
@@ -23,5 +24,11 @@
 @media (hover: hover) {
   .logo-text:hover {
     color: $cotton-candy;
+  }
+}
+
+@include tablet {
+  .logo-home-container {
+    margin-left: 1.5rem;
   }
 }

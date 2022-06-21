@@ -2,6 +2,7 @@ import MobileNav from "./MobileNav";
 import { useState, useEffect } from "react";
 
 import styles from "./navbar.module.scss";
+import DesktopNav from "./DesktopNav";
 
 // Navbar container for mobile and desktop to be passed into Layout
 // This is where the conditional visibility on scroll up and down lives
@@ -37,19 +38,19 @@ const NavbarContainer = () => {
   };
 
   // Scroll event listener for changeNavBarColor
-useEffect(()=>{
-  window.addEventListener("scroll", changeNavBarColor);
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavBarColor);
 
-  return () => window.removeEventListener("Scroll", changeNavBarColor)
-})
+    return () => window.removeEventListener("Scroll", changeNavBarColor);
+  });
 
   return (
-    <nav style={{ top: visible ? "0" : "-100px" }}
-    className={`${styles["nav-bar"]} ${styles["nav-coloured-bg"]}`}
+    <nav
+      style={{ top: visible ? "0" : "-100px" }}
+      className={`${styles["nav-bar"]} ${styles["nav-coloured-bg"]}`}
     >
-      {/* <div> This will be the Navbar container for mobile and desktop to be passed into Layout</div> */}
-
       <MobileNav bgChange={bgChange} />
+      <DesktopNav bgChange={bgChange} />
     </nav>
   );
 };

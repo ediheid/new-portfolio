@@ -6,7 +6,7 @@ const LogoLink = () => {
   return (
     <div className={styles["logo-home-container"]}>
       <Link href="/" alt="Link to home/about page">
-        <h2 className={styles["logo-text"]}>EH</h2>
+        <h2 className={styles["logo-text"]}>EH:</h2>
       </Link>
     </div>
   );

@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 // Container for both mobile and desktop nav
 .nav-bar {
@@ -35,7 +36,8 @@
 }
 
 // Todo: Add desktop class here too
-.mobile-navigation {
+.mobile-navigation,
+.desktop-navigation {
   width: 100vw;
   height: 7rem;
   display: flex;
@@ -51,13 +53,12 @@
 // Mobile links container
 .mobile-nav-links-container {
   list-style: none;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
 
-  padding: 8rem 3rem 0 0;
+  padding: 10rem 3rem 0 0;
 
   background-color: $cotton-candy;
   height: 55vh;
@@ -68,4 +69,53 @@
   // Todo: De-bug why top has a gap unless I set it like this..
   top: -1rem;
   left: 0;
+}
+
+.desktop-navigation {
+  display: none;
+}
+
+// Media Queries
+
+@include tablet {
+  .mobile-navigation {
+    display: none;
+  }
+
+  // On all devices from tablet +
+  .desktop-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+  }
+
+  .desktop-ul-container {
+    display: flex;
+    width: 60rem;
+    justify-content: space-around;
+
+    list-style: none;
+    margin: 0.8em 0 0.8em 0;
+
+    .nav-links {
+      font-size: 1.8rem;
+      color: $main-site-blue;
+      letter-spacing: 0.5px;
+      font-family: $sub-headings;
+    }
+
+    .nav-links * {
+      &:active {
+        color: $hot-pink;
+        font-size: 1.85rem;
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    .nav-links:hover * {
+      color: $hot-pink;
+      font-size: 1.85rem;
+    }
+  }
 }
