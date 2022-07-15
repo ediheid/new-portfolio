@@ -1,15 +1,13 @@
 // import Image from 'next/image'
-
-import LandingPage from "../Components/LandingPage/LandingPage";
-
+import Title from "../Components/LandingPageComponenets/title";
 import styles from "../pages/landing-page.module.scss";
 
 const Home = () => {
   return (
     <>
-      <div className={styles["page-container"]}>
-        <LandingPage />
-      </div>
+      <main className={styles["page-container"]}>
+        <Title />
+      </main>
     </>
   );
 };
