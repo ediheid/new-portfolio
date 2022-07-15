@@ -11,15 +11,14 @@
   background-color: rgba($color: $snow, $alpha: 0.5);
 }
 
-// Todo: Add variables and import fonts
 .nav-links {
   font-family: $nav-links-font-family;
   font-size: 2.6rem;
   margin: 1rem 0 1rem 0;
+}
 
-  // Todo: Add sticky hover solution
-  &:hover {
-    font-weight: bold;
+@media (hover: hover) {
+  .nav-links:hover * {
     color: $pink-lace;
   }
 }
@@ -35,7 +34,6 @@
   color: $hot-pink;
 }
 
-// Todo: Add desktop class here too
 .mobile-navigation,
 .desktop-navigation {
   width: 100vw;
@@ -69,6 +67,12 @@
   // Todo: De-bug why top has a gap unless I set it like this..
   top: -1rem;
   left: 0;
+
+  .nav-links {
+    &:hover {
+      color: $snow !important;
+    }
+  }
 }
 
 .desktop-navigation {
