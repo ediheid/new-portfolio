@@ -1,6 +1,7 @@
 import Head from "next/head";
 import NavbarContainer from "../Navbar/NavBarContainer";
 import Footer from "../Footer";
+import ProgressBar from "react-scroll-progress-bar";
 
 const Layout = ({ children }) => {
   return (
@@ -16,6 +17,7 @@ const Layout = ({ children }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <NavbarContainer />
+      <ProgressBar height=".5rem" bgcolor="#d342c3" />
       {children}
       <Footer />
     </>
